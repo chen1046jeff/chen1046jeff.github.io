@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+     <div class="background">
+            <div class="main-background">
+            <header>              
+             <img class="header-img" src="images/lone-starfish.jpg" alt="web-header-image">           
+             <nav>
+                <h1>Lone Starfish</h1> 
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#section-1">Story</a></li> 
+                    <li><a href="#contact-section">Contact</a></li> 
+                </ul>
+            </nav>
+    </header>
+    
+    <main>
+        <div class="wrapper">
+            <section id="section-1">
+                <h2 style="margin-left: 1em;"> Life of a starfish</h2>
+                <article>
+                    <h3>Article 1</h3>
+                    <img  class="starfish2"    src="images/starfish.jpg" alt="Starfish" title="Starfish" width="300">
+                     <p>Starfish, or sea stars, are fascinating marine creatures found in oceans around the world. Belonging to the class Asteroidea, these intriguing invertebrates are known for their unique star-shaped bodies, typically featuring five arms, though some species can have many more. With a remarkable ability to regenerate lost limbs, starfish play a crucial role in their ecosystems as both predators and prey, helping to maintain the balance of marine life. Their diverse colors and patterns add beauty to underwater environments, making them a favorite among marine enthusiasts and researchers alike.</p>   
+                </article>
+            </section>
+            <br>
+                    
+                    <section id="section-2">
+                        <h2 style="margin-left: 1em;">Facts about starfish</h2>
+                        <article>
+                            <h3>Article 2</h3>
+                            <ul>
+                                <li>Starfish can regrow lost arms.</li>
+                                <li>They digest prey by pushing out their stomachs.</li>
+                                <li>Starfish sense their surroundings with cells on their arms.</li>
+                            </ul>       
+                        </article>
+                    </section>
+
+            <section id="contact-section">
+                <h2>Contact to learn more</h2>
+                <form class="contact-form">
+                    <div>
+                        <label for="fullname">Full Name</label><br>
+                        <input type="text" name="fullname" id="fullname">
+                    </div>
+
+                    <div class="phone">
+                        <label for="phone">Phone number</label><br>
+                        <input type="tel" name="phone" id="phone"
+                        placeholder="000-000-0000">
+                        
+                    </div>
+
+                    <div class="message">
+                        <label for="message">Message</label><br>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div>
+                        <p>Would you like to subscribe to your newsletter?</p>
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes" name="newsletter" value="yes">
+                        <label for="no">No</label>
+                        <input type="radio" id="no" name="newsletter" value="no">
+
+                    <div>
+                        <p>When would like to be notified</p>
+                        <label for="morning">Morning</label>
+                        <input type="checkbox" id="morning" name="morning" value="morning">
+                        <label for="afternoon">Afternoon</label>
+                        <input type="checkbox" id="afternoon" name="afternoon" value="afternoon">
+                        <label for="evening">Evening</label>
+                        <input type="checkbox" id="evening" name="evening" value="evening">
+
+                    </div>
+                    <br><input type="submit" value="Send Message">
+                </form>
+            </section>
+        </div>
+    </div> 
+    </main>
+</div>
+    <footer class="footer">
+        <div>&copy; Lone Starfish</div>
+        </div>
+    </footer>
+
+</body>
+</html>
