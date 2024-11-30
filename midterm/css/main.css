@@ -52,27 +52,28 @@ table {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #aad4cf;
-    margin:0 auto;
-    padding-right: 20%;
-    padding-left: 20%;
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body takes up full viewport height */
+    margin: 0; /* Removes default browser margin */
+    padding-bottom: 20px; /* Optional padding for the edges */
+    box-sizing: border-box; /* Includes padding in height calculations */
 }
 
 .wrapper {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #d4e9e7;
-    display: block; 
-    margin: 0 auto;
-}
-
-.background {
-    width: 100%;
+    width: 100%; 
+    max-width: 800px; 
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .main-background {
     width: 100%; 
     max-width: 800px;
     background-color: #d4e9e7;
-    padding-bottom: 20px; 
 }
 
 .header-img {
@@ -88,7 +89,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -97,9 +98,13 @@ header h1 {
 }
 
 nav ul {
-    text-transform: uppercase;
-    font-size: 18px;
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+    padding: 0; 
+    margin: 20px 0;
     list-style: none;
+    font-size: 1.5rem;
 }
 
 nav ul li {
@@ -110,7 +115,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color:#ffffff;
+    color:#000000;
 }
 
 .wrapper { 
@@ -120,7 +125,7 @@ nav ul li a {
 h2 {
     font-weight: bold;
     margin-top: 15px;
-    font-size: larger;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
@@ -130,15 +135,20 @@ h3 {
 }
 
 .starfish2{
-    width: 300px;
+    width: 200px;
     float: left;
-    margin: 1rem;
+    padding-right: 20px;
+    padding-bottom: 30px;
 }
 
-section {
-    margin: 20px 0; 
-    padding: 10px;
-} 
+#section-1 h2 {
+    font-size: 1.75rem;
+}
+
+#section-2 ul {
+    list-style-type: disc;
+    margin: 15px;
+}
 
 .contact-form {
     background-color: #d4e9e7;
@@ -159,7 +169,7 @@ section {
     padding: 10px;
 }
 
-.contact-form .phone input{
+.contact-form .email input{
     width: 100%;
     padding: 10px;
 }
@@ -171,10 +181,6 @@ section {
     resize: vertical;
 }
 
-.contact-form .times p {
-    margin-bottom: 10px;
-}
-
 .contact-form input[type="submit"] {
     padding: 10px;
     border: none;
@@ -182,8 +188,11 @@ section {
     color: azure;
 }
 
-.footer {
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+#visit{
+    font-size: larger;
+}
+
+#footer {
+    padding:1rem;
+    text-align:right;
 }
