@@ -52,7 +52,112 @@ table {
 
 body {
     padding: 0 40px;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
+header {
+    background-color: #222;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav img {
+    width: 50px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    color: #f0b042;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-container button {
+    background-color: #f0b042;
+    border: none;
+    color: #222;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #dfa22f;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    .search-container {
+        margin: 10px 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav img {
+        width: 50px;
+        height: auto;
+    }
+    
+    .search-container input {
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+
+
 
 #home {
     position: relative;
@@ -290,7 +395,7 @@ h4 {
     border: 1px solid rgb(198, 141, 0);
     color: white;
     text-decoration: none;
-    padding-top: 2vh 2vh;
+    padding: 2vh; /* Adds padding to all sides */
     border-radius: 1px;
 }
 
