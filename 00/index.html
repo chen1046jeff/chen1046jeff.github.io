@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #11253d;
+            color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background-color: #ffe6ac;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        h3 {
+            color: #c78c06;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #c78c06;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #222;
+        }
+
+        @media (min-width: 760px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+
+            img {
+                grid-column: 1 / 2;
+            }
+
+            .content {
+                grid-column: 2 / 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/marketing.jpg" alt="Marketing">
+        <div class="content">
+            <h3>Marketing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit eaque ipsam id provident fugit voluptate perspiciatis earum dignissimos, architecto corrupti consequuntur magni cum facere, recusandae assumenda ad odit suscipit.</p>
+            <button>Marketing Plans</button>
+        </div>
+    </div>
+</body>
+</html>
