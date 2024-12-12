@@ -309,9 +309,6 @@ h4 {
     margin: 0 auto;
 }
 
-
-
-
 .service {
     background-color: #ffe6ac;
     display: flex;
@@ -332,6 +329,9 @@ h4 {
     padding-right: 10px;
 }
 
+.service h3 {
+    font-size: 30px;
+}
 
 
 @media (min-width: 760px) {
