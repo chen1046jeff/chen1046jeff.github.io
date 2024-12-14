@@ -225,8 +225,9 @@ button:hover {
 
 /* About Section */
 #about {
-    background-color: #fdf4dc; 
+    background-color: #fdf4dc;  /* Background color for the section */
     padding: 40px 20px;
+    overflow: hidden; /* This prevents the content from overflowing outside the container */
 }
 
 /* About Container */
@@ -235,28 +236,31 @@ button:hover {
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
-    max-width: 1200px; /* Maximum width of container */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Add side padding */
+    max-width: 1200px;  /* Maximum width of container */
+    margin: 0 auto;     /* Center the container */
+    padding: 0 20px;    /* Add side padding */
 }
 
 /* About Image */
 .about-img {
     flex: 1;
-    max-width: 600px;
-    object-fit: cover;
+    max-width: 600px;   
+    object-fit: cover; 
+    border-radius: 1px; 
 }
 
 /* About Content */
 .about-content {
     flex: 1;
     max-width: 600px;
+    background-color: transparent; 
+  padding: 20px;
 }
 
 .about-content h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #000000;
 }
 
 .about-content p {
@@ -268,28 +272,33 @@ button:hover {
 
 @media (min-width: 760px) {
     .about-container {
-        min-width: 760px; /* Set the minimum width */
+        min-width: 760px; /* Set the minimum width for tablet and up */
     }
+    
     .about-content p {
         font-size: 20px;
     }
+    
     .about-content {
-        padding-left: 20px;
+        padding-left: 20px; 
     }
 }
 
 @media (max-width: 759px) {
     .about-container {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; 
+        align-items: center;    /* Center the content and image */
     }
-}
 
-.about-img{
-    max-width: 100%;
-}
+    .about-img {
+        max-width: 100%;   
+        margin-bottom: 20px; /* Add spacing */
+    }
 
-.about-content {
-    max-width: 100%;
+    .about-content {
+        max-width: 100%;  
+        padding: 0 20px;   
+    }
 }
 
 h3 {
@@ -297,6 +306,8 @@ h3 {
     font-size: 1.5rem;
     margin: 10px 0;
 }
+
+
 
 .services-container {
     display: grid;
@@ -312,7 +323,6 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #ccc; /* Optional: Add borders for a cleaner look */
 }
 
 .service img {
@@ -391,9 +401,6 @@ h3 {
     }
 }
 
-
-
-
 /* Vision Section */
 .vision {
     color: rgb(255, 255, 255);
@@ -433,7 +440,7 @@ h3 {
 
 .team-container {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    grid-template-columns: 1fr; 
     gap: 0; /* Remove any gaps between items */
     max-width: 1200px;
     margin: 0 auto;
@@ -441,7 +448,7 @@ h3 {
 
 .team {
     display: flex;
-    flex-direction: column; /* Stack content for smaller screens */
+    flex-direction: column; 
     justify-content: center;
     align-items: center; /* Center align content */
 }
@@ -467,7 +474,6 @@ h3 {
         grid-template-rows: auto auto; /* No space between rows */
         gap: 0; /* No gaps */
     }
-
   
     .CEO {
         display: contents;
@@ -499,64 +505,53 @@ h3 {
         grid-row: 2; /* Image to the right of content */
     }
 
-
     .team img,
     .team .content {
         height: 100%; 
     }
 }
 
-
-
-
-
-
+/* Contact Styles */
 .contact-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    display: block; 
 }
 
-.contact-message, .contact-map {
-    padding-bottom: 10px;
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 1px;
+    margin-bottom: 15px; /* Space between fields */
     box-sizing: border-box;
 }
 
-.contact-map .map iframe {
-    width: 100%;
-    height: auto;
+textarea {
+    resize: vertical;
+    height: auto; /* Flexible height */
 }
-
-.hours-container {
-    margin-top: 20px;
-}
-
 
 input[type="submit"] {
-    background-color: #000000;
-    color: rgb(228, 204, 87);
+    width: 100px; /* Fixed width for the button */
+    padding: 5px;
     font-size: 16px;
-    border: none;
-    border-radius: 1px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-weight: bold;
+    color: #c78c06;
+    background-color: #000000;
+    text-align: center;
 }
 
-@media (min-width: 760px) {
-    .contact-container {
-        grid-template-columns: 1fr 1fr; /* Two columns of equal width */
-        grid-template-rows: auto;
-    }
-
-    .contact-message, .contact-map {
-        padding: 20px;
-    }
-
-    .hours-container {
-        grid-column: span 2; 
-    }
-}
-
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -571,15 +566,90 @@ th, td {
 }
 
 th {
-    background-color: #f4e3b1;
+    background-color: #ffe6ac;
     font-weight: bold;
 }
 
+@media (min-width: 760px) {
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        grid-template-rows: auto 1fr; /* Two rows */
+        gap: 30px;
+        align-items: start;
+    }
 
+    .contact.message {
+        grid-column: 1 / 2; /* First column */
+        grid-row: 1; /* First row */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        height: 100%;
+    }
 
+    .contact.map {
+        grid-column: 2 / 3; /* Second column */
+        grid-row: 1; /* First row */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
 
+    .contact.hours {
+        grid-column: 1 / 3; /* Span both columns */
+        grid-row: 2; /* Second row */
+    }
 
+    .contact.map iframe {
+        flex: 1;
+        width: 100%;
+        height: 500px; 
+        margin-bottom: -10px; 
+    }
 
+    input[type="submit"] {
+        align-self: start;
+        margin-top: auto;
+    }
 
+    .contact.message h3, .contact.map h2, .contact.hours h2 {
+        font-size: 35px; 
+        margin-bottom: 10px; 
+    }
+}
 
+/* Mobile */
+@media (max-width: 759px) {
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto; 
+        gap: 15px; 
+    }
 
+    .contact.map iframe {
+        width: 100%;
+        height: 300px; 
+    }
+
+    .contact.message {
+        grid-column: 1; 
+        grid-row: 1; 
+    }
+
+    .contact.hours {
+        grid-column: 1; 
+        grid-row: 2; 
+    }
+
+    .contact.map {
+        grid-column: 1; 
+        grid-row: 3; 
+    }
+
+    h2 {
+        text-align: left; 
+        padding-bottom: 10px;
+    }
+}
