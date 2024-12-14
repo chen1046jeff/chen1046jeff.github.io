@@ -531,9 +531,10 @@ textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border-radius: 1px;
-    margin-bottom: 15px; /* Space between fields */
+    border-radius: 1px; 
+    margin-bottom: 15px; 
     box-sizing: border-box;
+    border: 1px solid #000; 
 }
 
 textarea {
@@ -542,7 +543,7 @@ textarea {
 }
 
 input[type="submit"] {
-    width: 100px; /* Fixed width for the button */
+    width: 100px; 
     padding: 5px;
     font-size: 16px;
     font-weight: bold;
@@ -651,5 +652,40 @@ th {
     h2 {
         text-align: left; 
         padding-bottom: 10px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #c78c06;
+    text-align: left; 
+    padding: 20px 15px;
+}
+ 
+.footer-container {
+    max-width: 1200px; /* Maximum container width */
+    margin: 0 auto; /* Center the container */
+}
+
+.footer-container p {
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.6; 
+}
+
+.footer-container a {
+    color: #c78c06; 
+    text-decoration: none; 
+    border-bottom: 1px solid #c78c06; 
+}
+
+@media (min-width: 760px) {
+    footer {
+        padding: 30px 0;
+    }
+    
+    .footer-container p {
+        font-size: 20px;
     }
 }
