@@ -59,7 +59,7 @@ body {
 
 header {
     background-color: #222;
-    color: #fff;
+    color: #000000;
 }
 
 nav {
@@ -214,7 +214,7 @@ button:hover {
 #home button {
     padding: 10px 15px;
     background-color: #c78c06; /* Apply the yellow color */
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     font-weight: bold;
     cursor: pointer;
@@ -238,7 +238,7 @@ button:hover {
     gap: 20px;
     max-width: 1200px;  /* Maximum width of container */
     margin: 0 auto;     /* Center the container */
-    padding: 0 20px;    /* Add side padding */
+    padding: 0 20px;    /* Add padding */
 }
 
 /* About Image */
